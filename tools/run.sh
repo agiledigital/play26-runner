@@ -25,4 +25,4 @@ if [ ! -z "$TZ" ]; then
     echo "Container timezone set to: $TZ"
 fi
 
-exec "/home/runner/artifacts/bin/dist" "-J-XX:+ExitOnOutOfMemoryError" "-Dconfig.resource=/home/runner/artifacts/conf/combined.conf" "-Dplay.evolutions.db.default.autoApply=true" "-DapplyEvolutions.default=true" "$@"
+exec "/home/runner/artifacts/bin/dist" "-J-XX:+ExitOnOutOfMemoryError" "-Dconfig.resource=combined.conf" "-Dplay.evolutions.db.default.autoApply=true" "-DapplyEvolutions.default=true" "$@"
